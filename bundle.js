@@ -82,7 +82,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Search)\n/* harmony export */ });\nfunction Search(article, search_string) {\n  if (article.title.toLowerCase().search(search_string.toLowerCase()) !== -1) {\n    return true;\n  }\n  if (article.summary.toLowerCase().search(search_string.toLowerCase()) !== -1) {\n    return true;\n  }\n  if (article.tag.toLowerCase().search(search_string.toLowerCase()) !== -1) {\n    return true;\n  }\n  if (article.domain.toLowerCase().search(search_string.toLowerCase()) !== -1) {\n    return true;\n  }\n  return false;\n}\n\n//# sourceURL=webpack://test-1/./A1Article/ArticleFilter.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Search)\n/* harmony export */ });\nfunction Search(article, search_string) {\n  // nullish coalescing operator\n  var query = (search_string !== null && search_string !== void 0 ? search_string : '').toLowerCase();\n  if (!article || !query) return false;\n  if (article.title.toLowerCase().includes(query)) return true;\n  if (article.summary.toLowerCase().includes(query)) return true;\n  if (article.tag.toLowerCase().includes(query)) return true;\n  if (article.domain.toLowerCase().includes(query)) return true;\n  return false;\n}\n\n//# sourceURL=webpack://test-1/./A1Article/ArticleFilter.js?\n}");
 
 /***/ }),
 
