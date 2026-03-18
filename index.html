@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -61,8 +60,6 @@ Favicons - apple icon can not be transparent
           rel="shortcut icon" 
           href="/images/favicon.png?favicon_static=true">
 
-    <script type="module" crossorigin src="/bundles.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BiEc6Adi.css">
   </head>
   <body>
 
@@ -166,19 +163,19 @@ React
 
   <script>
 
-    // (function() {
+    (function() {
   
-    //   const script = document.createElement('script');
-    //   const timestamp = new Date().toLocaleTimeString('en-GB');
-    //   script.src = 'bundle.js?timestamp=' + timestamp;
-    //   script.async = true;
-    //   document.head.appendChild(script);
-    //   console.logD('DEBUG: START : index.html loaded bundle.js at: ' + timestamp, 'green');
+      const script = document.createElement('script');
+      const timestamp = new Date().toLocaleTimeString('en-GB');
+      script.src = 'bundle.js?timestamp=' + timestamp;
+      script.async = true;
+      document.head.appendChild(script);
+      console.logD('DEBUG: START : index.html loaded bundle.js at: ' + timestamp, 'green');
 
-    // })();
+    })();
 
   </script>
-
+    
 
 <!--------------------------------------------------------------------------------------------------
 Close tags
